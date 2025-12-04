@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int vet[8];
+    int maior, menor;
+    int posicaoMaior, posicaoMenor;
+
+    cout << "Digite 8 numeros: ";
+
+    for (int i = 0; i < 8; i++) {
+        cin >> vet[i];
+    }
+
+    // inicializando maior e menor com o primeiro elemento
+    maior = menor = vet[0];
+    posMaior = posMenor = 0;
+
+    // achar maior e menor
+    for (int i = 1; i < 8; i++) {
+        if (vet[i] > maior) {
+            maior = vet[i];
+            posMaior = i;
+        }
+        if (vet[i] < menor) {
+            menor = vet[i];
+            posMenor = i;
+        }
+    }
+
+    cout << "\nMaior valor: " << maior << " na posicao " << posicaoMaior << endl;
+    cout << "Menor valor: " << menor << " na posicao " << posicaoMenor << endl;
+
+    return 0;
+}
