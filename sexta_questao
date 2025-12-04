@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int vet[10];
+    int numero_encontrar;
+    bool encontrado = false;
+    int posicao = -1;
+
+    cout << "Digite 10 numeros: ";
+
+    for (int i = 0; i < 10; i++) {
+        cin >> vet[i];
+    }
+
+    cout << "Digite o numero para buscar: ";
+    cin >> x;
+
+    // buscando...
+    for (int i = 0; i < 10; i++) {
+        if (vet[i] == x) {
+            encontrado = true;
+            posicao = i;  // guardando a primeira posição
+            break;        // para a busca
+        }
+    }
+
+    if (encontrado) {
+        cout << "\nO numero " << numero_encontrado << "esta no vetor." << endl;
+        cout << "Primeira ocorrencia na posicao: " << posicao << endl;
+    } else {
+        cout << "\nO numero " << x << " nao esta no vetor." << endl;
+    }
+
+    return 0;
+}
